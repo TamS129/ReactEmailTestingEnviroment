@@ -1,5 +1,5 @@
 # ReactEmailTestingEnviroment
-## How to set up the Testing enviroment##
+## How to set up the Testing enviroment
 
 1. Pull down your repo and in package.json remove these two lines:
 >    "@react-email/components": "^0.0.32",
@@ -25,7 +25,8 @@ NOTE: If you are on Windows and are getting an error involing tailwind follow th
     "test:watch": "vitest",
     "test": "vitest run"
   }
-  - Save the file then cd .. to go back to the main root file. 
+  - Save the file then cd .. to go back to the main root file.
+  - Run "pnpm add cross-env --save-dev -w"
   - Run the Build Package again.
 
 NOTE 2: If you get an error saying that DEMO files are unable to build/Commander is not found. Go to the terminal and type in:
