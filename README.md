@@ -55,7 +55,7 @@ Note 3: If you build runs an error like this:
 
 Disregard and move on to the next steps.
 
-4. In the Test Environment repo, run npm install and then npm install <FOLDER PATH TO react-email repo>. The <Folder path> may need to be an relative path if absolute doesn't work.
+4. In the Test Environment repo, run npm install and then npm install FOLDER PATH TO react-email repo. The Folder path may need to be an relative path if absolute doesn't work.
 
 5. In your source code, RenderBugTest.jsx and EmailBugTest.jsx update imports to look like these:
 > import { Body, Text } from 'react-email-monorepo/packages/components';
