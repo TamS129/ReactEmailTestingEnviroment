@@ -111,16 +111,24 @@ Forward Slash: /\
 Back Slash: \\
 Brackets: [ ]\
 Curly Brackets {}\
-Bar Symbol: |\
+Bar Symbol: |
+
 Double Quotes: "\ 
-Single Quotes: ' \
-Line Break: \n\
-Tab: \t\
-Integers: 1234567890\
-Copyright Symbol: ©\
-TradeMark Symbol: (™)\
+
+Single Quotes: ' 
+
+Line Break: \n
+
+Tab: \t
+
+Integers: 1234567890
+
+Copyright Symbol: ©
+
+TradeMark Symbol: (™)
+
 Emoji: 😀
-\
+
 
 ## With Prettier Implemented
 
@@ -145,16 +153,27 @@ Emoji: 😀
   Period: .\
   Question Mark: ?\
   Forward Slash: /\
-  Back Slash: \\
-  Brackets: [ ]\
-  Curly Brackets {}\
-  Bar Symbol: |\
-  Double Quotes: &quot; (What??????????)\
-  Single Quotes: &#x27; (What??????????)\
-  Line Break:\n  \
-  Tab: \t\
-  Integers: 1234567890\
-  Copyright Symbol: ©\
-  Trade Mark Symbol: (™)\
+  Back Slash: \
+  
+  Brackets: [ ]
+  
+  Curly Brackets {}
+  
+  Bar Symbol: |
+  
+  Double Quotes: &quot; (What??????????)
+  
+  Single Quotes: &#x27; (What??????????)
+  
+  Line Break:\n 
+  
+  Tab: \t
+  
+  Integers: 1234567890
+  
+  Copyright Symbol: ©
+  
+  Trade Mark Symbol: (™)
+  
   Emoji: 😀
 ​
