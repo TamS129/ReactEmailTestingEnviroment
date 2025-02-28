@@ -87,33 +87,57 @@ export const Body = React.forwardRef<HTMLBodyElement, BodyProps>(
 ## Without Prettier Implementation
 \
 Rendered Email HTML: \
- Escape Character: \n\
-Tilda: ~\
-Backtick: `\
-Exclamation Point: !\
-At Symbol: @\
-Number Symbol: #\
-Money Symbol: $\
-Percentage Symbol: %\
-Up Symbol: ^\
-And Symbol: &\
-Asterisk Symbol: *\
-Parenthesis Left: (\
-Parenthesis Right: )\
-Minus Symbol: -\
-Under-Score: _\
-Addition Symbol: +\
-Equals Symbol: =\
-Comma: ,\
-Period: .\
-Question Mark: ?\
-Forward Slash: /\
-Back Slash: \\
-Brackets: [ ]\
-Curly Brackets {}\
+ Escape Character: \n
+ 
+Tilda: ~
+
+Backtick: `
+
+Exclamation Point: !
+
+At Symbol: @
+
+Number Symbol: #
+
+Money Symbol: $
+
+Percentage Symbol: %
+
+Up Symbol: ^
+
+And Symbol: &
+
+Asterisk Symbol: *
+
+Parenthesis Left: (
+
+Parenthesis Right: )
+
+Minus Symbol: -
+
+Under-Score: _
+
+Addition Symbol: +
+
+Equals Symbol: =
+
+Comma: ,
+
+Period: .
+
+Question Mark: ?
+
+Forward Slash: /
+
+Back Slash: \
+
+Brackets: [ ]
+
+Curly Brackets {}
+
 Bar Symbol: |
 
-Double Quotes: "\ 
+Double Quotes: "
 
 Single Quotes: ' 
 
@@ -132,27 +156,48 @@ Emoji: 😀
 
 ## With Prettier Implemented
 
-  Escape Character: \n\
-  Tilda: ~\
-  Backtick: `\
-  Exclamation Point: ! \
-  At Symbol: @  \
-  Number Symbol: # \
-  Money Symbol: $\
-  Percentage Symbol: %\
-  Up Symbol: ^\
-  And Symbol: &amp; (???????) (Does prettier cancel out he?)\
-  Asterisk Symbol: *\
-  Parenthesis Left: (\
-  Parenthesis Right: )\
-  Minus Symbol: -\
-  UnderScore: _\
-  Addition Symbol: +\
-  Equals Symbol: =\
-  Comma: ,\
-  Period: .\
-  Question Mark: ?\
-  Forward Slash: /\
+  Escape Character: \n
+  
+  Tilda: ~
+  
+  Backtick: `
+  
+  Exclamation Point: ! 
+  
+  At Symbol: @  
+  
+  Number Symbol: # 
+  
+  Money Symbol: $
+  
+  Percentage Symbol: %
+  
+  Up Symbol: ^
+  
+  And Symbol: &amp; (???????) (Does prettier cancel out he?)
+  
+  Asterisk Symbol: *
+  
+  Parenthesis Left: (
+  
+  Parenthesis Right: )
+  
+  Minus Symbol: -
+  
+  UnderScore: _
+  
+  Addition Symbol: +
+  
+  Equals Symbol: =
+  
+  Comma: ,
+  
+  Period: .
+  
+  Question Mark: ?
+  
+  Forward Slash: /
+  
   Back Slash: \
   
   Brackets: [ ]
