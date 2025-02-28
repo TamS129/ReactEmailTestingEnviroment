@@ -84,7 +84,7 @@ export const Body = React.forwardRef<HTMLBodyElement, BodyProps>(
 
 ## Character List that are affect by bug currently 2/28/25
 
-##WITHOUT PRETTIER
+## Without Prettier Implementation
 \
 Rendered Email HTML: \
  Escape Character: \n\
@@ -119,42 +119,42 @@ Tab: \t\
 Integers: 1234567890\
 Copyright Symbol: ©\
 TradeMark Symbol: (™)\
-Emoji: 😀\
+Emoji: 😀
+\
 
-##With Prettier (ONLY seems to work for <Body> tags seems to not work with <Text> tags...):
+## With Prettier Implemented
 
-  Escape Character: \n
-  Tilda: ~
-  Backtick: `
-  Exclamation Point:
-  At Symbol: @  
-  Number Symbol:
-  Money Symbol: $
-  Percentage Symbol: %
-  Up Symbol: ^
-  And Symbol: &amp; (???????) (Does prettier cancel out he?)
-  Asterisk Symbol: *
-  Parenthesis Left: (
-  Parenthesis Right: )
-  Minus Symbol: -
-  UnderScore: _
-  Addition Symbol: +
-  Equals Symbol: =
-  Comma: ,
-  Period: .
-  Question Mark: ?
-  </p>
-  Forward Slash: /
-  Back Slash: \
-  Brackets: [ ]
-  Curly Brackets {}
-  Bar Symbol: |
-  Double Quotes: &quot; (What??????????)
-  Single Quotes: &#x27; (What??????????)
-  Line Break:\n  
-  Tab: \t
-  Integers: 1234567890
-  Copyright Symbol: ©
-  Trade Mark Symbol: (™)
+  Escape Character: \n\
+  Tilda: ~\
+  Backtick: `\
+  Exclamation Point: ! \
+  At Symbol: @  \
+  Number Symbol: # \
+  Money Symbol: $\
+  Percentage Symbol: %\
+  Up Symbol: ^\
+  And Symbol: &amp; (???????) (Does prettier cancel out he?)\
+  Asterisk Symbol: *\
+  Parenthesis Left: (\
+  Parenthesis Right: )\
+  Minus Symbol: -\
+  UnderScore: _\
+  Addition Symbol: +\
+  Equals Symbol: =\
+  Comma: ,\
+  Period: .\
+  Question Mark: ?\
+  Forward Slash: /\
+  Back Slash: \\
+  Brackets: [ ]\
+  Curly Brackets {}\
+  Bar Symbol: |\
+  Double Quotes: &quot; (What??????????)\
+  Single Quotes: &#x27; (What??????????)\
+  Line Break:\n  \
+  Tab: \t\
+  Integers: 1234567890\
+  Copyright Symbol: ©\
+  Trade Mark Symbol: (™)\
   Emoji: 😀
 ​
