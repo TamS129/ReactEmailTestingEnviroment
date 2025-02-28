@@ -83,7 +83,9 @@ export const Body = React.forwardRef<HTMLBodyElement, BodyProps>(
 5. Open the browser and visit localhost:5173 and check the console.log for the message.
 
 ## Character List that are affect by bug currently 2/28/25
+
 ###WITHOUT PRETTIER
+
 Rendered Email HTML: 
  Escape Character: \n
 Tilda: ~
@@ -120,6 +122,7 @@ TradeMark Symbol: (™)
 Emoji: 😀
 
 ###With Prettier (ONLY seems to work for <Body> tags seems to not work with <Text> tags...):
+
   Escape Character: \n
   Tilda: ~
   Backtick: `
