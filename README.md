@@ -238,17 +238,16 @@ Reason: We might need to reassign the variable in order to allow changes dependi
 
 3. Change these lines of code:<br />
   if (options?.pretty) {<br />
-     return pretty(document);<br />
+    &emsp; return pretty(document);<br />
    }<br />
    return he.decode(document);<br />
-}
 
 TO:<br />
+<br />
   if (options?.pretty) {<br />
-     document = await pretty(document);<br />
+    &emsp; document = await pretty(document);<br />
    }<br />
    return he.decode(document);<br />
-}
 
 Reason: Prettier still escapes certain characters in some components like our <Text> component in React-email. In order to go about this, we still have to decode the output. So, we "prettify" the document first if prettier is enabled. We have to us an await keyword in the IF statement's body for when prettier is true because the function "pretty()" is an asynchronous function. Then afterwards once prettier has finished formatting, "he" will decode and fix the escape sequences. 
 
