@@ -232,23 +232,22 @@ Packages -> Render -> SRC -> browser -> render.tsx
 2. Go down to the botom of both files and replace:<br />
 const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;<br />
 TO:<br />
-#let# document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
+let document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
 
 Reason: We might need to reassign the variable in order to allow changes depending if prettier is being implemented or not. 
 
 3. Change these lines of code:<br />
-FROM:<br />
-  if (options?.pretty) {
-     return pretty(document);
-   }
-   return he.decode(document);
+  if (options?.pretty) {<br />
+     return pretty(document);<br />
+   }<br />
+   return he.decode(document);<br />
 }
 
 TO:<br />
-  if (options?.pretty) {
-     document = await pretty(document);
-   }
-   return he.decode(document);
+  if (options?.pretty) {<br />
+     document = await pretty(document);<br />
+   }<br />
+   return he.decode(document);<br />
 }
 
 Reason: Prettier still escapes certain characters in some components like our <Text> component in React-email. In order to go about this, we still have to decode the output. So, we "prettify" the document first if prettier is enabled. We have to us an await keyword in the IF statement's body for when prettier is true because the function "pretty()" is an asynchronous function. Then afterwards once prettier has finished formatting, "he" will decode and fix the escape sequences. 
