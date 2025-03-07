@@ -232,7 +232,7 @@ Packages -> Render -> SRC -> browser -> render.tsx
 2. Go down to the botom of both files and replace:<br />
 const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;<br />
 TO:<br />
-let document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
+#let# document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
 
 Reason: We might need to reassign the variable in order to allow changes depending if prettier is being implemented or not. 
 
