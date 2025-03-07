@@ -224,34 +224,35 @@ Emoji: 😀
 ​
 ## Possible Solution for Prettier Issue:
 
-1.You need to change 2 files within this package folder, both render.tsx files in src/browser and src/node.
- Go to Render Package in React-Email:
+1.You need to change 2 files within the Package folder, both render.tsx files in src/browser and src/node.
+Go to Render Package in React-Email:
 Packages -> Render -> SRC -> Node -> render.tsx
 Packages -> Render -> SRC -> browser -> render.tsx
 
 2. Go down to the botom of both files and replace:
-const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`; 
-to
+FROM:
+const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
+TO:
 let document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
 
-Reason: We are reassigning the variable in order to allow changes depending if prettier is being implemented or not. 
+Reason: We might need to reassign the variable in order to allow changes depending if prettier is being implemented or not. 
 
-3. After this implementation change these lines of code:
+3. Change these lines of code:
+FROM:
   if (options?.pretty) {
      return pretty(document);
    }
    return he.decode(document);
 }
 
-To...
-
+TO:
   if (options?.pretty) {
      document = await pretty(document);
    }
    return he.decode(document);
 }
 
-Reason: Prettier still escapes certain characters in some components like our <Text> component in React-email. In order to go about this, we still have to decode the output. So, we "prettify" the document first if prettier is enabled. We have to us an await function in the conditional statement for when prettier is true. That is because the function "pretty()" is an asynchronous function. Then aftewards once prettier has finished formatting he will decode and fix the escape sequences. 
+Reason: Prettier still escapes certain characters in some components like our <Text> component in React-email. In order to go about this, we still have to decode the output. So, we "prettify" the document first if prettier is enabled. We have to us an await keyword in the IF statement's body for when prettier is true because the function "pretty()" is an asynchronous function. Then afterwards once prettier has finished formatting, "he" will decode and fix the escape sequences. 
 
 4. Run pnpm build.
     IF you have an issue with the build not running due to build tracing issues go to:
@@ -261,10 +262,10 @@ Reason: Prettier still escapes certain characters in some components like our <T
     Try the Build again. If this continues check to make sure your code is accurately implemented from previous steps. 
 
 5. Go to Testing enviroment
-    npm update react-email-monorepo
+    - npm update react-email-monorepo
 
 6. Run the testing enviroment
     - npm run dev
 Check for the charactesr &, ', " and they should be fixed with prettier set to true or false! :D
 
-Note: This method works for our render functions but DOES NOT fix rendertostring() (from react-dom) in EmailBugTest.tsx. 
+Note: This method works for our render functions but DOES NOT fix renderToString() (from react-dom) in EmailBugTest.tsx. 
