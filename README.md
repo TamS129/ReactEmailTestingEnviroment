@@ -229,23 +229,22 @@ Go to Render Package in React-Email:
 Packages -> Render -> SRC -> Node -> render.tsx
 Packages -> Render -> SRC -> browser -> render.tsx
 
-2. Go down to the botom of both files and replace:
-FROM:
-const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
-TO:
+2. Go down to the botom of both files and replace:<br />
+const document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;<br />
+TO:<br />
 let document = `${doctype}${html.replace(/<!DOCTYPE.*?>/, '')}`;
 
 Reason: We might need to reassign the variable in order to allow changes depending if prettier is being implemented or not. 
 
-3. Change these lines of code:
-FROM:
+3. Change these lines of code:<br />
+FROM:<br />
   if (options?.pretty) {
      return pretty(document);
    }
    return he.decode(document);
 }
 
-TO:
+TO:<br />
   if (options?.pretty) {
      document = await pretty(document);
    }
